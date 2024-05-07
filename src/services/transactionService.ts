@@ -35,7 +35,8 @@ class TransactionService {
           }
 
           const { baseFeePerGas } = latestBlock;
-          const priorityFeePerGas = tx.maxPriorityFeePerGas || tx.gasPrice - baseFeePerGas;
+          const priorityFeePerGas =
+            Number(tx.maxPriorityFeePerGas) || Number(tx.gasPrice) - Number(baseFeePerGas);
 
           const transactionData = {
             hash: tx.hash,
