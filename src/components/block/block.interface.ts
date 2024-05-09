@@ -2,8 +2,6 @@
 
 export interface IBlock {
   number: number;
-  hash: string;
-  parentHash: string;
   nonce?: number;
   sha3Uncles: string;
   transactions: string[];

@@ -4,18 +4,11 @@ import {
   read,
   readByHash,
   getLatestList,
-  readBlockByPage,
   readBlockListWithSkip,
   getLastSyncedBlock,
   getBlockTime,
 } from '@components/block/block.service';
 
-const readBlockPage = async (req: Request, res: Response) => {
-  const pageNumber: number = parseInt(req.params.pageNumber, 10);
-  const output = await readBlockByPage(pageNumber);
-  res.status(httpStatus.OK);
-  res.send({ message: 'Read latest block list', output });
-};
 
 const isNumeric = (str: string) => {
   return /^\d+$/.test(str);

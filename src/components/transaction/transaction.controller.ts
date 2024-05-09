@@ -12,12 +12,6 @@ import {
   getTransactionCount,
 } from './transaction.service';
 
-// Retrieve transactions from the database
-// eslint-disable-next-line consistent-return
-const retrieveTransactions = async (req: Request, res: Response) => {
-  res.status(httpStatus.OK);
-  res.send({ message: 'Read', output: await read() });
-};
 
 // eslint-disable-next-line consistent-return
 const retrieveTransactionsByHashId = async (req: Request, res: Response) => {
